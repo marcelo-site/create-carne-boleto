@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --border-color: rgb(214 214 214);
+  --color-default: #484848;
+  --color-secondary: rgb(242, 35, 0);
+}
+
+body {
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+  padding: 10px 0;
+  color: var(--color-default);
+  margin: auto;
+  background-color: #fafafa;
+}
+
+main {
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+  background: rgb(245 243 243 / 20%);
+  border: 1px solid rgb(227 227 227);
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo-container {
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+
+  >svg {
+    font-size: 2rem;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: auto;
+}
+
+a {
+  color: inherit;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  img {
+    margin-top: -15px;
+    margin-bottom: -15px;
+    width: 90px;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 0;
+  }
+
+  .header img {
+    width: 80px;
+  }
+}
+
+.button {
+  background: var(--color-secondary);
+  color: white;
+  border: 0;
+  font-weight: 600;
+  width: 100%;
+  height: 56px;
+}
+
+.button button, .button a {
+  font-weight: 600;
+  cursor: pointer;
+padding: .5rem;
+font-size: 1rem;
+}
+
+.button svg {
+  font-size: 1.25rem;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 1.25rem 0;
+  text-align: justify;
+}
+
+.form-control input,
+.form-control textarea {
+  font-size: 18px;
+  padding: 12px 16px;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  outline: none;
+  color: #1d1d1d;
+}
+
+.form-control input::placeholder,
+.form-control textarea::placeholder {
+  font-size: 15px;
+}
+
+.form-control label {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.form-control textarea {
+  resize: vertical;
+  height: 200px;
+}
+
+.modal {
+  position: fixed;
+  background: #0000006b;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  >div {
+    background: white;
+    padding: 1rem;
+
+    .modal-content {
+      margin-top: 1rem;
+      font-size: 16px;
+    }
+
+    svg {
+      width: 28px;
+      height: 28px;
+      background: blue;
+      border-radius: 50%;
+      color: wheat;
+    }
+  }
+}
+
+.exit {
+  font-size: 12px;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: red;
+  color: white;
+  padding: 4px;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.stripe {
+  height: 56px;
+  color: white;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  background: var(--color-secondary);
+}
+
+.button-top {
+  border: 0px;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.2s, background 0.2s;
+  background: transparent;
+  height: 56px;
+  padding: .5rem;
+}
+
+.button-top.active {
+  opacity: 0.8;
+  background: rgb(141, 22, 2);
+}
+
+.button-footer {
+  margin: auto;
+  background: transparent;
+  color: white;
+  padding: 5px;
+  border: 1px solid white;
+}
+
+footer {
+  margin-top: 1rem;
+  text-align: center;
+  color: #4d4d4d;
+  margin-bottom: 2rem;
+}
