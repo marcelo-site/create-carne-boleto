@@ -40,7 +40,7 @@ export const MyDocument = ({ dataBillet }: { dataBillet: TdataBillet }) => {
   return (
       <Document >
         <Page size="A4" style={styles.page}>
-          {data.map((el, i) => {
+          {data.map((el) => {
             return <RenderBillet {...el} key={"parcela-"+ el.parcela} />
           })}
         </Page>
