@@ -21,12 +21,12 @@ function App() {
         <div className='flex flex-center logo-container'><FaMoneyCheckDollar /> Carnê</div>
       </div>
       {!viewPDF ? (
-        <div className='container' style={{ height: "90vh", overflowY: "auto" }}>
+        <div className='container' style={{ height: "90dvh", overflowY: "auto" }}>
           <Form />
         </div>
       ) : (
         <div
-          style={{ height: '90vh' }}
+          style={{ height: '90dvh' }}
         >
           <div style={{ height: "calc(100% - 56px)", width: "100%", margin: "auto" }}>
             <PDFViewer
