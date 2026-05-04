@@ -59,7 +59,6 @@ export function Form() {
               onChange={handleData}
               label="Benefiário"
               id="receiver"
-              // maxLength={25}
               placeholder="Nome de quem vai receber"
             />
             <Input
