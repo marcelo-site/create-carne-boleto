@@ -3,7 +3,7 @@ import { ModePayment } from "../mode-payment"
 
 export const OptionsPayment = () => {
   return (
-    <View style={{ marginTop: 8, gap: 8 }}>
+    <View style={{ marginTop: 6, gap: 8 }}>
       <ModePayment data={[{
         mode: "Espécie",
         width: "40%"

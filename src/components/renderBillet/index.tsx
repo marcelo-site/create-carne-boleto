@@ -35,7 +35,7 @@ export const RenderBillet = (data: IInstallmentsContent) => {
             borderBottomWidth: 0,
             alignItems: "flex-start",
             marginLeft: 8,
-            marginTop: 12
+            marginTop: 10
           }}
           >
             <Text style={{ ...styles.text, marginRight: 4 }}>Recebido:</Text>
@@ -46,17 +46,18 @@ export const RenderBillet = (data: IInstallmentsContent) => {
             position: "relative",
             borderBottomWidth: 0,
             height: 80,
-            marginRight: 0
+            marginRight: 0,
+            paddingRight: 8,
           }}
           >
             <OptionsPayment />
 
             <View style={styles.signature}>
-              <Text style={{ textAlign: "center", width: "100%" }}>Assinatura</Text>
+              <Text style={{ textAlign: "center", width: "100%"}}>Assinatura</Text>
             </View>
 
           </View>
-          <View style={{ marginBottom: -8, paddingTop: 4 }}>
+          <View style={{ marginBottom: -10, paddingTop: 9 }}>
             <NumberParcel parcel={parcela} qtyParcel={qtyInstallments} />
           </View>
         </View>
@@ -98,7 +99,7 @@ export const RenderBillet = (data: IInstallmentsContent) => {
               <QRCode qrcode={qrCode} />
             </View>
           </View>
-          <View style={{ marginBottom: -30, paddingTop: 8 }}>
+          <View style={{ marginBottom: -28, paddingTop: 8 }}>
             <NumberParcel parcel={parcela} qtyParcel={qtyInstallments} />
           </View>
         </View>

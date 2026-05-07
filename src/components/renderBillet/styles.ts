@@ -12,18 +12,17 @@ export const styles = StyleSheet.create({
   box: {
     borderBottomWidth: 0.5,
     marginHorizontal: 8,
-    marginTop: 5,
+    marginTop: 2,
     borderColor,
     height: 26,
-    paddingRight: 8,
     overflow: "hidden",
-    paddingVertical: 4,
+    paddingVertical: 2,
   },
   boxMinor: {
     borderColor,
     margin: 0,
     padding: 0,
-    paddingTop: 8,
+    paddingTop: 6,
     paddingBottom: 5,
     height: 30,
     paddingHorizontal: 8,
@@ -32,7 +31,7 @@ export const styles = StyleSheet.create({
   },
   textTitle: {
     fontSize: 8,
-    marginBottom: 4
+    marginBottom: 6
   },
   textData: {
     fontSize: 10,

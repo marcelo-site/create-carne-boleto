@@ -8,6 +8,6 @@ interface INumberParcel {
 
 export const NumberParcel = ({parcel, qtyParcel}:INumberParcel ) => {
     return (
-          <Text style={{ ...styles.textTitle, textAlign: "center" }}>{parcel} / {qtyParcel}</Text>
+          <Text style={{ ...styles.textTitle, textAlign: "center" }}>{+qtyParcel > 1 ? `${parcel} de ${qtyParcel}`: 'única'}</Text>
     )
 }
