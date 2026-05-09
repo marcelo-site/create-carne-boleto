@@ -24,7 +24,7 @@ export const RenderBillet = (data: IInstallmentsContent) => {
   return (
     <View wrap={false} style={styles.container}>
       <View style={{ flexDirection: "row" }}>
-        <View style={{ width: '30%', borderRight: 1, borderRightStyle: "dashed", height: 212 }}>
+        <View style={{ width: '30%', borderRight: 1, borderRightStyle: "dashed", height: 208 }}>
 
           <BoxInfo title="Beneficário" data={receiver} />
           <BoxInfo title="Produto / Serviço" data={product} />
@@ -93,7 +93,7 @@ export const RenderBillet = (data: IInstallmentsContent) => {
                 </View>
                 <View style={{ flexDirection: "row" }}>
                   <Text style={{ ...styles.text }}>Chave Pix: </Text>
-                  <Text style={{ ...styles.textData }}> {pix}</Text>
+                  <Text style={{ ...styles.textData }}> {pix.replace("+55", "")}</Text>
                 </View>
               </View>
               <QRCode qrcode={qrCode} />

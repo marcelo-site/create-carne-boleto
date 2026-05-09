@@ -1,6 +1,5 @@
 import { QrCodePix } from "qrcode-pix";
-import { isPossivelTelefoneBR } from "./utils/isPossivelTelefoneBR";
-import { normalizeTelefonePix } from "./utils/normalizeTelfonePix";
+// import { normalizeTelefonePix } from "./utils/normalizeTelfonePix";
 
 export interface IBoleto {
     receiver: string;
@@ -35,15 +34,6 @@ export const parseBoleto = async (data: IBoleto) => {
         value,
     } = data
 
-    let normalizePix = data.pix;
-
-    (() => {
-        const isPoistiveTel = isPossivelTelefoneBR(pix)
-        if (isPoistiveTel) {
-            normalizePix = normalizeTelefonePix(pix) || ""
-        }
-    })();
-
     const date = new Date(venc + "T00:00");
     const dayVenc = date.getDate() > 30 ? 30 : date.getDate();
     let monthVenc = date.getMonth();
@@ -67,11 +57,11 @@ export const parseBoleto = async (data: IBoleto) => {
 
         const qrCodePix = QrCodePix({
             version: '01',
-            key: normalizePix,
+            key: pix,
             name: receiver,
             city: city,
             transactionId: `${i + 1}de${qtyInstallments}${product.replace(/\s/g, "")}`.substring(0, 25),
-            message: `Parcela ${i + 1} de ${qtyInstallments} - ${product}`,
+            message: `${i + 1} de ${qtyInstallments} - ${product}`,
             value: valor
         })
 
